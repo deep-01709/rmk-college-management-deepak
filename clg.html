@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RMK Engineering College — Admissions</title>
+  <meta name="description" content="RMK Engineering College - Admission Management Portal" />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">RMK Engineering College</h1>
+      <nav class="nav">
+        <a href="#programs">Programs</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Admission Management Portal</h2>
+        <p>Apply online for undergraduate and postgraduate programs. Manage application status, documents and payments.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#admissions">Apply Now</a>
+          <a class="btn ghost" href="#programs">View Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="container section">
+      <h3>Programs Offered</h3>
+      <div class="grid">
+        <article class="card">
+          <h4>B.Tech — Computer Science & Engineering</h4>
+          <p>4 years | Accredited | Intake: 120</p>
+        </article>
+        <article class="card">
+          <h4>B.Tech — Electronics & Communication</h4>
+          <p>4 years | Accredited | Intake: 90</p>
+        </article>
+        <article class="card">
+          <h4>M.Tech — Data Science</h4>
+          <p>2 years | Intake: 24</p>
+        </article>
+        <article class="card">
+          <h4>MBA</h4>
+          <p>2 years | Intake: 60</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="admissions" class="container section form-section">
+      <h3>Online Application</h3>
+      <p>Fill in the form below to start your application. This demo saves data locally in browser (for a demo). To accept real submissions, see README section about backends.</p>
+
+      <form id="admissionForm" class="form">
+        <div class="row">
+          <label>Full Name
+            <input name="name" id="name" type="text" required />
+          </label>
+          <label>Email
+            <input name="email" id="email" type="email" required />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Phone
+            <input name="phone" id="phone" type="tel" />
+          </label>
+          <label>Program
+            <select name="program" id="program" required>
+              <option value="">Select Program</option>
+              <option>B.Tech - CSE</option>
+              <option>B.Tech - ECE</option>
+              <option>M.Tech - Data Science</option>
+              <option>MBA</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Address
+          <textarea id="address" name="address" rows="2"></textarea>
+        </label>
+
+        <label>Upload Documents (PDF) — Demo
+          <input id="docs" type="file" accept=".pdf" />
+          <small class="muted">File upload is demo-only. To enable server storage, connect a backend.</small>
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn">Submit Application</button>
+          <button type="button" id="saveDraft" class="btn ghost">Save Draft (local)</button>
+        </div>
+      </form>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+
+    <section id="timeline" class="container section">
+      <h3>Admission Timeline</h3>
+      <ul class="timeline">
+        <li><strong>Jan 1 - Mar 31:</strong> Online Application Window</li>
+        <li><strong>Apr 10:</strong> Entrance Exam / Merit List Published</li>
+        <li><strong>Apr 20 - May 5:</strong> Counseling & Seat Allotment</li>
+        <li><strong>May 10:</strong> Classes Start</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h3>Contact Admissions</h3>
+      <p>Email: <a href="mailto:admissions@rmkec.edu.in">admissions@rmkec.edu.in</a> | Phone: +91-44-XXXX-XXXX</p>
+      <p>Address: RMK Engineering College campus — Example Street, Kavaraipettai</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> RMK Engineering College · Admission Management Portal</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
